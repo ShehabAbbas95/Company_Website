@@ -1,0 +1,43 @@
+<!-- Extends the base template -->
+{% extends 'base.html' %}
+{% block header %}
+  {% block title %}Home{% endblock %}
+{% endblock %}
+<!-- End of the base template -->
+{% block content %}
+  <section class="h-100 gradient-form" style="background-color: #eee;">
+    <div class="card rounded-3 text-black mt-2">
+      <div class="col-lg-12">
+        <div class="card-body p-md-2 mx-md-2 text-center">
+          <h4>Older Reviews</h4>
+          <hr>
+          {% for review in reviews %}
+            <p>{{ review }}</p>
+            <hr>
+          {% endfor %}
+        </div>
+      </div>
+      <hr>
+      <div class="mt-5">
+        <h3>Add new review</h3>
+        <hr>
+        <form class="review-form px-2"  action="/reviews", method="post">
+            <select class="form-select " aria-label="Default select example" name="product_name">
+              {% for product in products %}
+                <option value="{{product.product_name}}" >{{product.product_name}}</option>
+              {% endfor %}
+            </select>
+            <input type="text" placeholder="Enter Your Feedback" name="review" required>
+            <button type="submit" id="remove" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-1 " type="button"  >Add Review</button>
+        </form>
+      </div>
+      <div class="col-lg-12 d-flex align-items-center justify-content-center gradient-custom-2">
+          <h4>We are more than just a company</h4>
+      </div>
+    </div>
+  </section>
+{% endblock  %}
+
+ 
+
+

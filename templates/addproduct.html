@@ -1,0 +1,47 @@
+<!-- Extends the base template -->
+{% extends 'base.html' %}
+{% block header %}
+  {% block title %}Add Product{% endblock %}
+{% endblock %}
+<!-- End of the base template -->
+{% block content %}
+  <section class="h-100 gradient-form" style="background-color: #eee;">
+    <div class="container py-1 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-10">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0 justify-content-center align-items-center h-100" >
+              <div class="col-lg-6">
+                <div class="card-body p-md-2 mx-md-2 text-center">
+                  <div class="text-center">
+                    <img src="./static/imgs/RemoteCoders-logo.webp" style="width: 185px;" alt="logo">
+                    <hr>
+                  </div>
+                  <form action="/add_product" method="post" enctype="multipart/form-data">
+                    <div class="form-outline mb-4 ">
+                      <input type="text"  class="form-control mb-1" placeholder="Product_Name"  name="product_name" required />
+                      <input type="text"  class="form-control mb-1" placeholder="Model"  name="model" required/>
+                      <input type="text"  class="form-control mb-1" placeholder="Color" name="color" required/>
+                      <input type="number"  class="form-control mb-1" placeholder="Price" name="price" required />
+                      <input type="file"  class="form-control mb-1" placeholder="image" name="image"  required/>
+                    </div>
+                    <div class="text-center pt-1 mb-1 pb-1 d-inline">
+                      <button  type="submit" class="btn btn-outline-danger">Add Product</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="col-lg-12 d-flex align-items-center justify-content-center gradient-custom-2">
+                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                  <h4>We are more than just a company</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+

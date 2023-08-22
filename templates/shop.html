@@ -1,0 +1,39 @@
+<!-- Extends the base template -->
+{% extends 'base.html' %}
+{% block header %}
+  {% block title %}Company Shop{% endblock %}
+{% endblock %}
+<!-- End of the base template -->
+{% block content %}
+  <!-- start shop section -->
+  <section>
+    <div class="topic-header">
+      <h1>Products</h1>
+    </div>
+    <div class="article">
+      <div class="container">
+        <div class="row">
+          {% for product in products%}
+            <div class="col-md-3">
+              <div class="article-content" id={{product.product_name+product.model}}>
+                <img  src="./static/imgs/{{product.image}}" alt="{{product.image}}">
+                <h3>{{product.product_name}}</h3>
+                <p id="model">Model: {{product.model}}</p>
+                <span>Price: {{product.price}}</span>
+                <span>Color: {{product.color}}</span>
+                <br>
+                <button  type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-1" type="button" onclick="addToCart(event)">Add</button>
+                <button type="submit" id="remove"  class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-1 remove" type="button" disabled onclick="removeFromCart(event)">Remove</button>
+              </div>
+            </div>
+          {% endfor%}
+        </div>
+        <div class="col-lg-12 d-flex align-items-center justify-content-center gradient-custom-2">
+          <h4>We are more than just a company</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- end shop section -->
+  <script src="./static/js/shop.js"></script>
+{% endblock %}

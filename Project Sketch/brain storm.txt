@@ -1,0 +1,10 @@
+Products Page -- Class for products 
+
+Add - Remove methods
+
+Register, Login and Logout
+
+
+Cart Page  --> methods (empty cart -- remove item )
+
+Readme on git

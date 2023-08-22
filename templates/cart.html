@@ -1,0 +1,17 @@
+<!-- Extends the base template -->
+{% extends 'base.html' %}
+{% block header %}
+  {% block title %}Your Cart{% endblock %}
+{% endblock %}
+<!-- End of the base template -->
+{% block content %}
+  <section class="cart">
+    <div id="cartItems">
+    </div>
+    <hr>
+    <button  type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-1" type="button" id="placeOrder" > <a href="/place_order">Place Order</a></button>
+    <button  type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-1" type="button" id="emptyCart" onclick="emptyCart()" >Empty Cart</button>
+  </section>
+  <script src="./static/js/cart.js"></script>
+  <script src="./static/js/shop.js"></script>
+{% endblock %}
