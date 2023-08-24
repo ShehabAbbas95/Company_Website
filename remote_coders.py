@@ -8,7 +8,7 @@ from Product import Product
 
 app = Flask("watches_store")
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['UPLOAD_FOLDER'] = "./static/imgs/"
 db.init_app(app)
 # A secret key generated using secrets.token_hex()
