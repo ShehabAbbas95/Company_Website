@@ -243,7 +243,6 @@ def delete_product():
 
 
 @app.route("/shop")
-@login_required
 def shop():
     # Get the products from the db and pass them to the html
     products = Product.query.all()
@@ -253,6 +252,7 @@ def shop():
 
 
 @app.route("/cart")
+@login_required
 def cart():
     return render_template("/cart.html")
 # Placing User Orders
