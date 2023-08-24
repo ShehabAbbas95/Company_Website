@@ -1,15 +1,21 @@
 # MY FINAL PROJECT
-- What does it do?  
-  * It's a company website shows a landing page that introduces the company 
-  * The company has it's own shop for thier employees (This should only for the registered employees that added by the admins but for testing, any one can register and login)
 
-- What is the "new feature" which you have implemented that we haven't seen before?  
-    * The user is allowed to select products from the shop and his products appear in his cart
+- What does it do?
+
+  - It's a company website shows a landing page that introduces the company
+  - The company has it's own shop for thier employees (This should only for the registered employees that added by the admins but for testing, any one can register and login)
+
+- What is the "new feature" which you have implemented that we haven't seen before?
+  - The user is allowed to select products from the shop and his products appear in his cart
+
 ## Prerequisites
+
     * flask_login
     * flask_sqlalchemy
     * flask_bcrypt
+
 ## Project Checklist
+
 - [x] It is available on GitHub.
 - [x] It uses the Flask web framework.
 - [x] It uses at least one module from the Python Standard Library other than the random module.
@@ -23,21 +29,30 @@
 - [x] It uses modern JavaScript (for example, let and const rather than var).
 - [x] It makes use of the reading and writing to a file feature.
 - [x] It contains conditional statements. Please provide below the file name and the line number(s) of at least
-  one example of a conditional statement in your code.
+      one example of a conditional statement in your code.
   - File name: remote_coders.py
-  - Line number(s): 94 
+  - Line number(s): 94
 - [x] It contains loops. Please provide below the file name and the line number(s) of at least
-  one example of a loop in your code.
+      one example of a loop in your code.
   - File name: remote_coders.py
   - Line number(s): 256
 - [x] It lets the user enter a value in a text box at some point.
-  This value is received and processed by your back end Python code.
+      This value is received and processed by your back end Python code.
 - [x] It doesn't generate any error message even if the user enters a wrong input.
-- [x] The code follows the code and style conventions as introduced in the course, is fully documented using comments and doesn't contain unused or experimental code. 
-  In particular, the code should not use `print()` or `console.log()` for any information the app user should see. Instead, all user feedback needs to be visible in the browser.  
+- [x] The code follows the code and style conventions as introduced in the course, is fully documented using comments and doesn't contain unused or experimental code.
+      In particular, the code should not use `print()` or `console.log()` for any information the app user should see. Instead, all user feedback needs to be visible in the browser.
 - [x] All exercises have been completed as per the requirements and pushed to the respective GitHub repository.
 
 ## Testing Intruction:
+
 - For testing the Product class functions user should be admin, so please login with the following credentials
-- Email: admin@gmail.com  Pass: admin123
+- Email: admin@gmail.com Pass: admin123
 - If you intialized a new database please sign up with the above credentials for the admin
+
+## Deployment
+
+- First upload the archive file and unzip it on the server
+- Second change the name of the app in the wsgi from the web tab
+- Third install the required modules
+- Additionally change the path of the static from the web tab
+- Run and test
